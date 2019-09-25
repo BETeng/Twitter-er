@@ -1,8 +1,5 @@
 
-const getPosts = (req, res) => {
+exports.getPosts = (req, res) => {
   res.send("hello world");
-}
-
-module.exports = {
-  getPosts
 };
+
