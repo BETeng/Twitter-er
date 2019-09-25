@@ -1,0 +1,23 @@
+{
+  "name": "Twitter-er",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BETeng/Twitter-er.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BETeng/Twitter-er/issues"
+  },
+  "homepage": "https://github.com/BETeng/Twitter-er#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
