@@ -1,5 +1,10 @@
 
 exports.getPosts = (req, res) => {
-  res.send("hello world from controllers");
+  res.json({
+    posts: [
+      {title: ' First post'},
+      {title: ' Second post'}
+    ]
+  });
 };
 
