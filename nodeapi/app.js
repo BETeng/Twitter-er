@@ -1,6 +1,16 @@
 const express = require('express');
 const app = express();
+const mongoose = require('mongoose');
 const morgan = require('morgan');
+const dotenv = require('dotenv');
+dotenv.config();
+
+mongoose.connect(process.env.MONGO_URI, {useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true })
+.then(() => {console.log("DB Connected")})
+
+mongoose.connection.on('error', err => {
+  console.log(`DB connection error: ${err.message}`);
+});
 
 // routes
 const postRoutes = require('./routes/post');
@@ -10,5 +20,5 @@ app.use(morgan("dev"));
 
 app.use("/", postRoutes);
 
-const port = 8080;
+const port = process.env.PORT || 8080;
 app.listen(port, () => {console.log(`API is listening on port: ${port}`)});
