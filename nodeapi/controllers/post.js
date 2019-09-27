@@ -11,5 +11,5 @@ exports.getPosts = (req, res) => {
 
 exports.createPost = (req, res) => {
   const post = new Post(req.body);
-  console.log("creating post:", post);
+  console.log("creating post:", req.body);
 };
