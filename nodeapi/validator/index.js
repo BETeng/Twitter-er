@@ -13,5 +13,12 @@ req.check('body', 'Body must be between 2-2000 characters').isLength({
   max:2000
 });
 //check for errors
+const errors = req.validationErrors()
+
+if(errors){
+  const firstError = errors.map((error) => error.msg)[0]
+  return res.status(400).json({error: firstError})
+}
+next();
 
 };
